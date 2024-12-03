@@ -14,7 +14,12 @@ const resetPassword=async(req,res)=>{
                     connection.release();
                     setResult(user[0])
                 }else{
-                    console.log(err);
+                    res.status(200).json({
+                                data:err,
+                                error:false,
+                                success:true,
+                                message:"error in reset password"
+                    })
                 }
                 
             })
@@ -41,7 +46,12 @@ const resetPassword=async(req,res)=>{
                                 message:"Password was Chance Succefully"
                             })
                         }else{
-                            console.log(err);
+                            res.status(200).json({
+                                data:err,
+                                error:false,
+                                success:true,
+                                message:"error in reset password"
+                            })
                         }
                         
                     })
