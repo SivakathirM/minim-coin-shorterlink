@@ -36,7 +36,7 @@ const Buy = () => {
         return res.data
       }
     } catch (error) {
-      console.log(error);
+     toast.error(error)
     }
   }
 
@@ -61,7 +61,7 @@ const Buy = () => {
           }
       }
     } catch (error) {
-     console.log(error);
+     toast.error(error)
     }
   }
 
@@ -80,7 +80,7 @@ const Buy = () => {
           verifyPayment(data.order_id);
         })
       } catch (error) {
-        console.log(error);
+        toast.error(error)
       }
       
     }
