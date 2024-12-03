@@ -21,7 +21,6 @@ const ForgetPassword = () => {
       };
     });
   };
-  console.log(data.email);
   
   const handleSubmit = async (e) => {
     e.preventDefault();
