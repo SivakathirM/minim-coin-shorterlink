@@ -29,8 +29,6 @@ const totalPage=async(req,res)=>{
         // const [totalPageData]=await mysqlConnection.query('select count(*) as count from shorterlinks')
     
     } catch (err) {
-        console.log("err",err);
-        
         res.json({
             message:err?.message || err,
             error:true,
