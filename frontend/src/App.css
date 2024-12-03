@@ -1,0 +1,102 @@
+.customShadow{
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.borders{
+    border: 1px solid black;
+}
+.font{
+    font-size: 4px;
+}
+
+/* user table */
+.userTable{
+@apply bg-white
+}
+.userTable th{
+    @apply borders text-sm font-light break-words
+}
+.userTable td{
+    @apply borders text-base text-center align-baseline font-light break-words 
+}
+
+#pagiantionTable{
+    @apply md:pl-10 lg:pl-44 text-left
+}
+
+#linkTable{
+    @apply lg:pl-20 text-left
+}
+
+/*scrollbar hidden*/
+.scrollbar-none::-webkit-scrollbar{
+    display:none;
+}
+
+.active{
+    @apply text-white bg-orange-600
+}
+
+#dashMenu .active{
+    @apply text-white bg-black 
+}
+
+#dashMenuIcon .active{
+    @apply text-white
+}
+
+
+/* buy page ul li */
+.buyHead{
+    background: -webkit-linear-gradient(45deg,#ffe01c,#f8a71b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.buyPageUl{
+    list-style: none;
+}
+
+.buyPageUl li{
+    position: relative;
+    margin: auto;
+    width: 60%;
+    padding-bottom: 0.4em;
+    color: #000742;
+}
+
+.buyPageUl li:not(:last-child){
+    margin-bottom: 11px;
+    border-bottom: 1px solid #a4a5aa;
+}
+
+.activePlan {
+    background: linear-gradient(45deg,#ffe01c,#f8a71b);
+}
+.activePlan2 {
+    background: linear-gradient(45deg,#bff524,#45ba45);
+}
+.activePlan3 {
+    background: linear-gradient(45deg,#00cdf3,#0179e9);
+}
+
+.activePlan button{
+    background: white;
+    color: black;
+}
+.activePlan h1:first-child{
+    background: white;
+    color: black;
+}
+.activePlan h1:not(:first-child){
+    color: white;
+}
+.activePlan h1:not(:first-child) label{
+    color: black;
+}
+
+.otpAppearance::-webkit-outer-spin-button,
+.otpAppearance::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
