@@ -32,7 +32,6 @@ async function payment(req,res){
             },
         }
         Cashfree.PGCreateOrder("2023-08-01",request).then(response=>{
-            console.log(response.data);
             res.json({
                 data:response.data,
                 error:false,
@@ -42,8 +41,12 @@ async function payment(req,res){
         }).catch(error=>{
             console.error(error.response.data.message)
         })
-    } catch (error) {
-        console.log(error);
+    } catch (err) {
+        res.json({
+            message:err?.message || err,
+            error:true,
+            success:false
+        })
     }
 }
 
