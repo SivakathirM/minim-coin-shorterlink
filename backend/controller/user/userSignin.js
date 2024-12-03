@@ -21,7 +21,12 @@ async function userSignInController(req,res){
                     connection.release();
                     setResult(rows[0])
                 }else{
-                    console.log(err);
+                    res.status(200).json({
+                        data:err,
+                        error:false,
+                        success:true,
+                        message:"error in signin"
+                    })
                 }
                 
             })
