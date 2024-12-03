@@ -31,7 +31,12 @@ async function userOtp(req,res,next){
     }
     transporter.sendMail(option,function (error,info) {
         if(error){
-            console.log(error,'error');
+            res.status(200).json({
+                data:error,
+                error:false,
+                success:true,
+                message:"error in userOtp"
+            })
         }
     })
     try {
