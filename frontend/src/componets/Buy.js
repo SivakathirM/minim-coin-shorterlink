@@ -10,7 +10,6 @@ import { useSelector } from "react-redux";
 const Buy = () => {
   const navigate = useNavigate();
   const user = useSelector((state) => state?.user?.user);
-  console.log(user);
   const [planPrice,setPlanPrice]=useState(99.00)   
   const [planCoin,setPlanCoin]=useState(100.00)   
   let cashfree;
@@ -54,8 +53,6 @@ const Buy = () => {
       const res = await dataRespose.json();
 
       if (res && res.data) {
-          console.log("payment verified", res.data);
-          console.log("payment status", res.data.payment_status);
           if(res.data.payment_status ==="SUCCESS"){
             toast.success(`Payment ${res.data.payment_status}`)
             fetchSubcription(res.data);
