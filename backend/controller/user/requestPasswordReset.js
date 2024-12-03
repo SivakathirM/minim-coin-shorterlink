@@ -12,7 +12,6 @@ const requestPasswordReset=async(req,res)=>{
             
             await connection.query("SELECT * FROM users WHERE email =?",[email],async(err,data)=>{
                 
-                console.log(data[0]);
                 if (data[0]) {
                     connection.release();
                     const user=data[0]
@@ -38,8 +37,6 @@ const requestPasswordReset=async(req,res)=>{
                     transporter.sendMail(option,function (error,info) {
                         if(error){
                             console.log(error,'error');
-                        }else{
-                            console.log('mail send',info);
                         }
                     })
                     res.status(200).json({
